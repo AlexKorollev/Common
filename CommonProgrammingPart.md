@@ -61,11 +61,104 @@ ECMA-262 = ECMAScript’s
 
 ...
 
-6th Edition - ECMAScript 2015 - es6 - существенные изменнения (=> Babel - A transpiler that can convert ES6 code to ES5 code)
+6th Edition - ECMAScript 2015 - ES6 - существенные изменнения (=> Babel - A transpiler that can convert ES6 code to ES5 code)
+
 7th Edition - ECMAScript 2016
+
 8th Edition - ECMAScript 2017
 
+## Data types
 
-### Links
+Чтобы хранить информацию, используются переменные.
+
+Переменная состоит из имени и выделенной области памяти, которая ему соответствует.
+
+Для объявления или, другими словами, создания переменной используется ключевое слово var:
+
+```
+var message;
+message = 'Hello';
+
+или 
+
+var balance = 15;
+```
+
+### Common syntax rules
+
+- не чувствителен к Whitespace, Line Breaks, and Format Control Characters (Но: минимизация)
+- comments (`//`, `/**/`)
+- зарезервированные слова
+- ; (завершение инструкции - используем!)
+```
+1.
+var y = x + f
+(a+b).toString() 
+
+=> var y = x + f(a+b).toString(); 
+
+2.
+return
+true;
+
+return; true; <=/=> return true;
+
+3.
+x
+++ 
+y 
+
+=> x; ++y;
+```
+
+### Как именуются переменные?
+
+На имя переменной в JavaScript наложены всего два ограничения:
+- имя может состоять из: букв, цифр, символов $ и _
+- первый символ не должен быть цифрой
+
+Особенности в наименовании:
+- чувствительность к регистру
+- можно использовать русские буквы - но не следует это делать
+- нельзя использовать зарезервироанные слова
+- используйте осмысленные слова, коротко описывающие суть вашей переменной
+
+#### Примеры
+
+```
+var $ = 10;
+
+var 10a; // начало не может быть цифрой
+var my-age; // дефис '-' не является разрешенным символом
+
+```
+
+Primitives: Number, String, Boolean, Null, Undefined
+
+### Number
+
+### String
+
+### Boolean
+
+### Date
+
+### Array
+
+### Object
+
+### Undefined
+
+### Function
+
+### RegExp
+
+### Приведенеи типов
+
+
+## Links
 https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5
+
 https://learn.javascript.ru/intro
+
+http://www.stilson.net/documentation/javascript.pdf
