@@ -137,6 +137,54 @@ Primitives: Number, String, Boolean, Null, Undefined
 
 ### Number
 
+Какие типы в реальной жизни?
+- целочисленные (1)
+- дробные (2/3)
+- десятичные (0.4)
+
+В компьютерном представлении дробные числа представляются в виде десятичных дробей, ограниченные объемом хранимых бит.
+Так выделяют числа
+- [числа двойной точности](https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%B4%D0%B2%D0%BE%D0%B9%D0%BD%D0%BE%D0%B9_%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8) (64 бита)
+- [числа одинарной точности](https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%BE%D0%B9_%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8) (32 бита)
+- [числа с плавающей запятой](https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D1%81_%D0%BF%D0%BB%D0%B0%D0%B2%D0%B0%D1%8E%D1%89%D0%B5%D0%B9_%D0%B7%D0%B0%D0%BF%D1%8F%D1%82%D0%BE%D0%B9) (мантисса + показатель степени)
+
+В JS только один тип - числа двойной точности. Однако, если вы введете следующее
+```
+> 5.000
+5
+```
+
+#### Number Literals
+
+```
+> 35  // integer
+35
+> 3.141  // floating point
+3.141
+> 0xFF  // hexadecimal
+255
+>0377
+255
+
+//Exponent
+> 5e2
+500
+> 5e-2
+0.05
+> 0.5e2
+50
+```
+
+Infinity
+```
+var a = 1/0;
+console.log(a) // Infinity
+console.log(typeof a) //number
+```
+
+#### Методы
+
+
 ### String
 
 ### Boolean
@@ -162,3 +210,5 @@ https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecma
 https://learn.javascript.ru/intro
 
 http://www.stilson.net/documentation/javascript.pdf
+
+http://speakingjs.com/es5/
